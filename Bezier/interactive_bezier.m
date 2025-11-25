@@ -106,7 +106,7 @@ function interactive_bezier
         if strcmp(event.Key,'return')  % Enter pressed
             data = guidata(f);
             xy = bezier(data.B,data.t);  % evaluated curve
-            % Save to MAT file (can also change to JSON if desired)
+            % Save to MAT file
             save('bezier_curve.mat','data','xy');
             disp('Curve saved to bezier_curve.mat');
             uiresume(f);  % stop uiwait and return
